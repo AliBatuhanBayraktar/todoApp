@@ -1,0 +1,103 @@
+.container {
+  margin:0 auto;
+  padding-left: $gutter-width;
+  padding-right: $gutter-width;
+
+  & .row {
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -$gutter-width;
+    margin-right: -$gutter-width;
+
+    &.justify-content-start {
+      justify-content: flex-start;
+    }
+
+    &.justify-content-center {
+      justify-content: center;
+    }
+
+    &.justify-content-end {
+      justify-content: flex-end;
+    }
+
+  }
+}
+
+.container {
+  width: 100%;
+}
+
+@for $i from 1 through $grid {
+  .col-xs-#{$i} {
+    padding-left: $gutter-width;
+    padding-right: $gutter-width;
+    width: calc((100% / #{$grid}) * #{$i})
+  }
+}
+
+@media (min-width:577px) {
+
+  .container {
+    width: 540px;
+  }
+
+  @for $i from 1 through $grid {
+    .col-sm-#{$i} {
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+      width: calc((100% / #{$grid}) * #{$i})
+    }
+  }
+
+}
+
+@media (min-width:768px) {
+
+  .container {
+    width: 720px;
+  }
+
+  @for $i from 1 through $grid {
+    .col-md-#{$i} {
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+      width: calc((100% / #{$grid}) * #{$i})
+    }
+  }
+
+}
+
+@media (min-width:992px) {
+
+  .container {
+    width: 960px;
+  }
+
+  @for $i from 1 through $grid {
+    .col-md-#{$i} {
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+      width: calc((100% / #{$grid}) * #{$i})
+    }
+  }
+
+}
+
+@media (min-width:1200px) {
+
+  .container {
+    width: 1140px;
+  }
+
+  @for $i from 1 through $grid {
+    .col-md-#{$i} {
+      padding-left: $gutter-width;
+      padding-right: $gutter-width;
+      width: calc((100% / #{$grid}) * #{$i})
+    }
+  }
+
+}

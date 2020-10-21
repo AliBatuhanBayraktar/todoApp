@@ -1,0 +1,26 @@
+button.btn {
+  height:40px;
+  line-height:40px;
+  padding:0 20px;
+  margin-bottom:0;
+  border: 0 solid transparent;
+  border-radius: $border-radius;
+  transition: box-shadow 0.6s;
+  cursor:pointer;
+
+  @each $name, $color in $colors {
+
+    &.btn-#{$name} {
+      color: map_get($color, child);
+      background: map_get($color, mother);
+      box-shadow: 0 0 10px lighten(map_get($color, mother), 40);
+
+      &:hover {
+        box-shadow: 0 0 10px lighten(map_get($color, mother), 10);
+      }
+    }
+
+  }
+
+
+}

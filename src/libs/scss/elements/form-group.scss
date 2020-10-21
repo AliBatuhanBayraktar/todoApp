@@ -1,0 +1,36 @@
+
+form {
+  width: 100%;
+}
+
+.form-group {
+  width:100%;
+  margin-bottom: 20px;
+
+  & > textarea,
+  & > input {
+
+    width:100%;
+    height:50px;
+    padding: 0 15px;
+    border: 0 solid transparent;
+    border-radius: $border-radius;
+    box-shadow: 0 0 10px lighten(map_get($dark, mother), 55);
+    background: map_get($white, mother);
+    transition: box-shadow 0.6s ease-out;
+
+    &:focus {
+      box-shadow: 0 0 10px lighten(map_get($info, mother), 35);
+      outline: none;
+    }
+
+  }
+
+  & > textarea {
+    height: inherit;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 150px;
+    padding: 15px;
+  }
+}

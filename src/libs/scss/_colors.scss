@@ -1,0 +1,62 @@
+$success: (
+  mother : #46bb76,
+  child  : #f9fcff
+);
+
+$warning: (
+  mother : #d9660c,
+  child  : #f9fcff
+);
+
+$danger: (
+  mother : #bb4646,
+  child  : #f9fcff
+);
+
+$info: (
+  mother : #158bc9,
+  child  : #f9fcff
+);
+
+$passive: (
+  mother : #e0e0e0,
+  child  : #f9fcff
+);
+
+$white: (
+  mother : #fafafa,
+  child  : #343536
+);
+
+$dirty-white: (
+  mother : #eaeaea,
+  child  : #343536
+);
+
+$grey: (
+  mother : #b8babb,
+  child  : #fafafa
+);
+
+$silver-dark: (
+  mother : #656768,
+  child  : #fafafa
+);
+
+$dark: (
+  mother : #343536,
+  child  : #fafafa
+);
+
+$colors: (
+  'success': $success,
+  'warning': $warning,
+  'danger': $danger,
+  'info': $info,
+  'passive': $passive,
+  'white': $white,
+  'dirty-white': $dirty-white,
+  'grey': $grey,
+  'silver-dark': $silver-dark,
+  'dark': $dark,
+)

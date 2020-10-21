@@ -1,0 +1,72 @@
+.accordion {
+  overflow:hidden;
+  margin-bottom: $gutter-width;
+  border-radius:$border-radius;
+  box-shadow: 0 0 10px map_get($dirty-white, mother);
+  background: map_get($dirty-white, mother);
+
+  & > .accordion-head {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height:60px;
+
+    & > div, {
+      flex:1;
+
+      & > h3 {
+        padding:0 10px;
+        color: map_get($dirty-white, child)
+      }
+    }
+
+    & > div:first-child,
+    & > div:last-child{
+      display:flex;
+      flex: inherit;
+      align-items: center;
+      width: 60px;
+      height:60px;
+      cursor: pointer;
+    }
+
+    & > div:last-child {
+      transition: transform 0.6s;
+    }
+
+  }
+
+  & .accordion-body {
+    overflow:hidden;
+    max-height: 0;
+    transform-origin: top;
+    border-top: 1px solid transparent;
+    transition: max-height 0.6s, border-top 0.6s;
+
+    & article {
+      padding: 20px;
+
+      & > p {
+        margin: 0 0 10px 0;
+      }
+    }
+
+  }
+
+  &.open {
+
+    & .accordion-head {
+
+      & > div:last-child {
+        transform: rotate(45deg);
+      }
+
+    }
+
+    & .accordion-body {
+      max-height: 500px;
+      border-top: 1px solid map_get($grey, mother);
+    }
+
+  }
+}
